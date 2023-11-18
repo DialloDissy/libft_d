@@ -1,35 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sidiallo <sidiallo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/07 17:33:25 by sidiallo          #+#    #+#             */
-/*   Updated: 2023/11/15 14:34:43 by sidiallo         ###   ########.fr       */
+/*   Created: 2023/11/09 13:15:58 by sidiallo          #+#    #+#             */
+/*   Updated: 2023/11/15 16:29:59 by sidiallo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-#include<ctype.h>
-#include<stdio.h>
+#include <string.h>
 #include "libft.h"
 
-int ft_isdigit(int c)
-
+int ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-    if(c >= '0' && c <= '9')
-        return(1);
-    return(0);
-}
+    unsigned char *strA;
+    unsigned char *strB;
+    size_t i;
 
-// int main()
-// {
-//     char c,result;
-
-//     c = 'b';
-//     result = ft_isdigit(c);
-//     printf("the result is %d", result);
-//     return 0;
+    i=0;
+    strA = (unsigned char *)s1;
+    strB = (unsigned char *)s2;
+    while( 0 < n)
+    {
+        if (strA[i] != strB[i])
+            return (strA[i] - strB[i]);
+        i++;
+        n--;
+    }
+    return (0);
     
-// }
+}

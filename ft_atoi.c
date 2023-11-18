@@ -1,35 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sidiallo <sidiallo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/07 17:58:33 by sidiallo          #+#    #+#             */
-/*   Updated: 2023/11/15 14:34:32 by sidiallo         ###   ########.fr       */
+/*   Created: 2023/11/10 12:34:31 by sidiallo          #+#    #+#             */
+/*   Updated: 2023/11/15 15:43:56 by sidiallo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<ctype.h>
-#include<stdio.h>
+#include <stdlib.h>
 #include "libft.h"
 
-int ft_isalnum(int c)
+int ft_atoi(const char *nptr)
 {
-    if(((c >= 'a' && c <= 'z')|| (c >= 'A' && c <= 'Z') || (c >='0' && c <= '9')))
-        return(1);
-    return(0);
+    int i;
+    int sign;
+    int res;
+    
+    i = 0;
+    sign = 1;
+    res =0;
+    while(nptr[i] == ' ' || (nptr[i] >= 9 && nptr[i] <= 13))
+        i++;
+    if(nptr[i] == '-')
+        sign = -1;
+    if(nptr[i] == '-' || nptr[i] == '+')
+        i++;
+    while(nptr[i] >= '0' && nptr[i] <= '9')
+    {
+        res = (res*10 + nptr[i]- '0');
+        i++;
+    }
+    return(res * sign );
+    
 }
-
-// int main()
-// {
-//     char c, result;
-    
-//     c = 'a';
-    
-//     result = ft_isalnum(c);
-    
-//     printf("The result is %d", result);
-    
-//     return 0;
-// }

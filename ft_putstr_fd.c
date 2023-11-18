@@ -1,35 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sidiallo <sidiallo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/07 17:33:25 by sidiallo          #+#    #+#             */
-/*   Updated: 2023/11/15 14:34:43 by sidiallo         ###   ########.fr       */
+/*   Created: 2023/11/14 13:38:45 by sidiallo          #+#    #+#             */
+/*   Updated: 2023/11/15 14:31:15 by sidiallo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+// #include "libft.h"
 
-#include<ctype.h>
-#include<stdio.h>
-#include "libft.h"
-
-int ft_isdigit(int c)
-
-{
-    if(c >= '0' && c <= '9')
-        return(1);
-    return(0);
-}
-
-// int main()
+// void ft_putstr_fd(char *s, int fd)
 // {
-//     char c,result;
-
-//     c = 'b';
-//     result = ft_isdigit(c);
-//     printf("the result is %d", result);
-//     return 0;
-    
+//     write(fd, s, ft_strlen(s));
 // }

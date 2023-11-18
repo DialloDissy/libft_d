@@ -1,35 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sidiallo <sidiallo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/07 17:33:25 by sidiallo          #+#    #+#             */
-/*   Updated: 2023/11/15 14:34:43 by sidiallo         ###   ########.fr       */
+/*   Created: 2023/11/08 15:14:28 by sidiallo          #+#    #+#             */
+/*   Updated: 2023/11/15 14:51:38 by sidiallo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-#include<ctype.h>
-#include<stdio.h>
+#include <ctype.h>
 #include "libft.h"
 
-int ft_isdigit(int c)
-
+int ft_tolower(int c)
 {
-    if(c >= '0' && c <= '9')
-        return(1);
-    return(0);
+    if( c >= 'A' && c <= 'Z')
+        return(c + 32);
+    return(c);
 }
-
-// int main()
-// {
-//     char c,result;
-
-//     c = 'b';
-//     result = ft_isdigit(c);
-//     printf("the result is %d", result);
-//     return 0;
-    
-// }

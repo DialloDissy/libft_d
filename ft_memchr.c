@@ -1,35 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sidiallo <sidiallo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/07 17:33:25 by sidiallo          #+#    #+#             */
-/*   Updated: 2023/11/15 14:34:43 by sidiallo         ###   ########.fr       */
+/*   Created: 2023/11/08 15:43:53 by sidiallo          #+#    #+#             */
+/*   Updated: 2023/11/16 11:55:00 by sidiallo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-#include<ctype.h>
-#include<stdio.h>
+#include <string.h>
 #include "libft.h"
 
-int ft_isdigit(int c)
 
+void *ft_memchr(const void *s, int c, size_t n)
 {
-    if(c >= '0' && c <= '9')
-        return(1);
-    return(0);
-}
-
-// int main()
-// {
-//     char c,result;
-
-//     c = 'b';
-//     result = ft_isdigit(c);
-//     printf("the result is %d", result);
-//     return 0;
+    unsigned char *str;
+    unsigned char  oct;
+    size_t i;
+   
     
-// }
+    i=0;
+    str = (unsigned char*)s;
+    oct = (unsigned char)c;
+    while(i < n)
+    {
+        if(str[i] == oct)
+            return (str+i);
+        i++;
+    }
+    return(NULL);
+}

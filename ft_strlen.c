@@ -1,35 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sidiallo <sidiallo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/07 17:33:25 by sidiallo          #+#    #+#             */
-/*   Updated: 2023/11/15 14:34:43 by sidiallo         ###   ########.fr       */
+/*   Created: 2023/11/08 09:57:15 by sidiallo          #+#    #+#             */
+/*   Updated: 2023/11/15 14:34:25 by sidiallo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-#include<ctype.h>
+#include <string.h>
 #include<stdio.h>
 #include "libft.h"
 
-int ft_isdigit(int c)
-
-{
-    if(c >= '0' && c <= '9')
-        return(1);
-    return(0);
-}
-
-// int main()
-// {
-//     char c,result;
-
-//     c = 'b';
-//     result = ft_isdigit(c);
-//     printf("the result is %d", result);
-//     return 0;
+ size_t ft_strlen(const char *s)
+ {
+    int i;
     
-// }
+    i = 0 ;
+    while(s[i])
+        i++;
+    return(i);
+ }
+ 
+ 
+//  int    main()
+//  {
+//     char a[] = "easynkjhjhjh";
+//     char nbr = ft_strlen(a);
+
+//     printf("nombre de caractere %d", nbr );
+//     return(0);
+//  }

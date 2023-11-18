@@ -1,35 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sidiallo <sidiallo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/07 17:33:25 by sidiallo          #+#    #+#             */
-/*   Updated: 2023/11/15 14:34:43 by sidiallo         ###   ########.fr       */
+/*   Created: 2023/11/14 13:13:04 by sidiallo          #+#    #+#             */
+/*   Updated: 2023/11/15 14:31:25 by sidiallo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+// #include "libft.h"
 
-#include<ctype.h>
-#include<stdio.h>
-#include "libft.h"
-
-int ft_isdigit(int c)
-
-{
-    if(c >= '0' && c <= '9')
-        return(1);
-    return(0);
-}
-
-// int main()
+// void ft_putendl_fd(char *s, int fd)
 // {
-//     char c,result;
-
-//     c = 'b';
-//     result = ft_isdigit(c);
-//     printf("the result is %d", result);
-//     return 0;
-    
+//     ft_putstr_fd(s, fd);
+//     ft_putchar_fd('\n',fd);
 // }

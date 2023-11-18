@@ -1,35 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sidiallo <sidiallo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/07 17:33:25 by sidiallo          #+#    #+#             */
-/*   Updated: 2023/11/15 14:34:43 by sidiallo         ###   ########.fr       */
+/*   Created: 2023/11/09 17:06:32 by sidiallo          #+#    #+#             */
+/*   Updated: 2023/11/14 16:09:49 by sidiallo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-#include<ctype.h>
-#include<stdio.h>
+#include <strings.h>
 #include "libft.h"
 
-int ft_isdigit(int c)
-
+void ft_bzero(void *s, size_t n)
 {
-    if(c >= '0' && c <= '9')
-        return(1);
-    return(0);
+    ft_memset(s, 0, n);
 }
-
-// int main()
-// {
-//     char c,result;
-
-//     c = 'b';
-//     result = ft_isdigit(c);
-//     printf("the result is %d", result);
-//     return 0;
-    
-// }
