@@ -33,12 +33,12 @@ char *ft_strnstr(const char *big, const char *little, size_t len)
     {
         // on cherche la sous chaines little(1ier occurence)
         if(big[i] == little[j])
-        {
-            // on verifie que i+j respecte les condition, sont egaux sur little et ne depasse pas len
+            {
+            // on verifie que i+j respecte les conditions, sont egaux sur little et ne depasse pas len
             while(big[i +j] == little [j] && i +j < len)
             {
                 
-                if(little[j + 1] == '\0')
+                if(little[j + 1] == '\0')    
                     return((char *)big +i);
                 i++;
             }
