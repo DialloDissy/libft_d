@@ -6,7 +6,7 @@
 /*   By: sidiallo <sidiallo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 15:59:47 by sidiallo          #+#    #+#             */
-/*   Updated: 2023/11/15 15:55:34 by sidiallo         ###   ########.fr       */
+/*   Updated: 2023/11/22 11:57:49 by sidiallo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,11 @@ char *ft_strtrim(char const *s1, char const *set)
          while(s1[j - 1] && ft_strchr(set, s1[j -1])&& j > i)
              j--;
          str = (char*)malloc(sizeof(char)*(j -i +1));
+         if(str == NULL)
+            return(NULL);
          if(str)
              ft_strlcpy(str, &s1[i], j -i +1);
      }
      return(str);
     
-}
+} 
