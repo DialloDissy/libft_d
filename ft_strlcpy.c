@@ -6,22 +6,21 @@
 /*   By: sidiallo <sidiallo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 14:11:55 by sidiallo          #+#    #+#             */
-/*   Updated: 2023/11/22 12:42:03 by sidiallo         ###   ########.fr       */
+/*   Updated: 2023/11/23 15:26:09 by sidiallo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 
 {
-	size_t i;
+	size_t	i;
 
-    if (size == 0)
-    {
-        return (ft_strlen(src));
-    }
+	if (size == 0)
+	{
+		return (ft_strlen(src));
+	}
 	i = 0;
 	while (i < size - 1 && src[i])
 	{

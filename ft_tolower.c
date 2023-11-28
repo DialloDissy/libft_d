@@ -6,16 +6,15 @@
 /*   By: sidiallo <sidiallo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 15:14:28 by sidiallo          #+#    #+#             */
-/*   Updated: 2023/11/15 14:51:38 by sidiallo         ###   ########.fr       */
+/*   Updated: 2023/11/23 15:21:26 by sidiallo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
 #include "libft.h"
 
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
-    if( c >= 'A' && c <= 'Z')
-        return(c + 32);
-    return(c);
+	if (c >= 'A' && c <= 'Z')
+		return (c + 32);
+	return (c);
 }

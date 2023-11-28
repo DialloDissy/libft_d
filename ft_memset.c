@@ -6,12 +6,11 @@
 /*   By: sidiallo <sidiallo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 11:51:57 by sidiallo          #+#    #+#             */
-/*   Updated: 2023/11/22 14:18:24 by sidiallo         ###   ########.fr       */
+/*   Updated: 2023/11/23 15:03:56 by sidiallo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
 void	*ft_memset(void *s, int c, size_t n)
 {

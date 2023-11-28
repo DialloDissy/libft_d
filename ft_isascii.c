@@ -6,27 +6,15 @@
 /*   By: sidiallo <sidiallo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 18:21:05 by sidiallo          #+#    #+#             */
-/*   Updated: 2023/11/15 14:34:39 by sidiallo         ###   ########.fr       */
+/*   Updated: 2023/11/23 15:29:12 by sidiallo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<ctype.h>
-#include<stdio.h>
 #include "libft.h"
 
-int ft_isascii(int c)
+int	ft_isascii(int c)
 {
-    if(c >= 0 && c <=127)
-        return(1);
-    return(0);
-    
+	if (c >= 0 && c <= 127)
+		return (1);
+	return (0);
 }
-
-// int main()
-// {
-//     char a,result;
-//     a = ' ';
-//     result = ft_isascii(a);
-//     printf("the result is %d", result);
-//     return (0);
-// }
